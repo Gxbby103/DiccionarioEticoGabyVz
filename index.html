@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUSCADOR INTERNO</title>
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+  <style>
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(250, 250, 250);
+    background: linear-gradient( #000000 , #5b78ed);
+   }
+   
+   header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 4em;
+    height: 6em;
+    color: #fff;
+   }
+   
+   /* ... Resto de tu cÃ³digo CSS ... */
+   
+   /* Hacer que las imÃ¡genes sean responsivas */
+   img {
+    max-width: 100%;
+    height: auto;
+   }
+   
+   /* Media Queries */
+   @media screen and (max-width: 600px) {
+    header {
+      flex-direction: column;
+    }
+    ul {
+      margin-right: 0;
+    }
+    .books-fall {
+      height: 100vh;
+    }
+    section {
+      gap: 0 5em;
+    }
+    section p {
+      font-size: 1em;
+      left: 0;
+    }
+    section img{
+      width: 100%;
+    }
+   }
+   
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(250, 250, 250);
+    background: linear-gradient( #000000 , #5b78ed);
+ }
+ 
+ header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 4em;
+    height: 6em;
+    color: #fff;
+ }
+ 
+ .logo {
+    font-size: 2em;
+    font-weight: 800;
+ }
+ 
+ ul {
+    margin-right: 14em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 1.5em;
+    list-style: none;
+ }
+ 
+ li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 6000;
+ }
+ 
+ li a:hover {
+    border-bottom: 0.1em solid #fff;
+ }
+ 
+ .field-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 0.3em;
+ }
+ 
+ .field-search input{
+    border-radius: 1em;
+    padding: 0.3em 1em;
+    border: 0.2em solid #fff;
+ }
+ 
+ .field-search img {
+    margin-top: 0.2em;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 0.99em;
+    width: 8%;
+ }
+ 
+ .books-fall {
+    position: absolute;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+ }
+ 
+ .books {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+ }
+ 
+ .books img {
+    width: 5em;
+ }
+ 
+ .books div {
+    position: absolute;
+    display: block;
+ }
+ .books div:nth-child(1) {
+    left: 20%;
+    animation: booksfall 12s linear infinite;
+}
+
+.books div:nth-child(2) {
+    left: 50%;
+    animation: booksfall 14s infinite linear;
+}
+
+.books div:nth-child(3) {
+    left: 70%;
+    animation: booksfall 12s infinite linear;
+}
+
+.books div:nth-child(4) {
+    left: 5%;
+    animation: booksfall 15s infinite linear;
+}
+
+.books div:nth-child(5) {
+    left: 85%;
+    animation: booksfall 11s infinite linear;
+}
+
+.books div:nth-child(6) {
+    left: 90%;
+    animation: booksfall 10s infinite linear;
+}
+
+.books div:nth-child(7) {
+    left: 15%;
+    animation: booksfall 9s infinite linear;
+}
+
+.books div:nth-child(8) {
+    left: 60%;
+    animation: booksfall 11s infinite linear;
+}
+.books div:nth-child(9) {
+    left: 20%;
+    animation: booksfall 15s linear infinite;
+}
+
+.books div:nth-child(10) {
+    left: 50%;
+    animation: booksfall 16s infinite linear;
+}
+
+.books div:nth-child(11) {
+    left: 70%;
+    animation: booksfall 8s infinite linear;
+}
+
+.books div:nth-child(12) {
+    left: 5%;
+    animation: booksfall 13s infinite linear;
+}
+
+.books div:nth-child(13) {
+    left: 85%;
+    animation: booksfall 11s infinite linear;
+}
+
+.books div:nth-child(14) {
+    left: 90%;
+    animation: booksfall 12s infinite linear;
+}
+
+.books div:nth-child(15) {
+    left: 15%;
+    animation: booksfall 14s infinite linear;
+}
+
+.books div:nth-child(16) {
+    left: 60%;
+    animation: booksfall 9s infinite linear;
+}
+@keyframes booksfall {
+    0%{
+        opacity: 0;
+        top: -10%;
+        transform: translateX(20px);
+    }
+    10%{
+        opacity: 1;
+    }
+    20%{
+        transform: translateX(-20px);
+    }
+    40%{
+        transform: translateX(-20px);
+    }
+    60%{
+        transform: translateX(20px);
+    }
+    80%{
+        transform: translateX(-20px);
+    }
+    100%{
+        top: 110%;
+        transform: translateX(-20px);
+    }
+}
+ /* AquÃ­ van las demÃ¡s reglas CSS */
+ 
+ section {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 0 17em;
+ }
+ 
+ section p {
+    font-size: 1.5em;
+    color: #fff;
+    position: relative;
+    left: 60px;
+    text-align: center;
+ }
+ 
+ section img{
+    width: 35em;
+ }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      Universidad TESOEM
+    </div>
+    <ul>
+      <li><a href="#">Diccionario de la Lengua Española de Etica</a></li>
+    </ul>
+  </header>
+  <div id="contenedor" class="field-search">
+    <input id="buscar" class="buscar" placeholder="Buscar...">
+    <button id="btn" class="btn">Buscar</button>
+  </div>
+  <section>
+    <div id="panel" class="panel">&nbsp;</div>
+  </section>
+  <div class="books-fall">
+    <div class="books">
+        <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy6.gif"></div>
+        <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy5.gif"></div>
+        <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy6.gif"></div>
+        <!-- Agrega más imágenes aquí según sea necesario -->
+      </div>
+    </div>
+    <section>
+      <p>Bienvenido al Diccionario Virtual de Ética, donde explorarás los principios morales y comportamientos <br>
+        éticos. Aquí encontrarás términos seleccionados para comprender de manera clara los conceptos<br>
+        que influyen en nuestras decisiones diarias.</p>
+      <img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy1.gif">
+    </section>
+    <script>
+
+  var palabras = {
+    'absolutismo moral': 'sostiene que existen ciertos principios morales universales que son la base desde que juzgamos las acciones de las personas. ',
+    'valores': 'son creencias individuales que motivan a las personas a comportarse de una manera u otra. Sirven para guiar el comportamiento humano.',
+    'morales': 'consiste de estándares de comportamiento que predominan y guían a las personas para que puedan vivir de manera cooperativa en grupos',
+    'etica': 'describe la investigación y análisis de los principios y los dilemas morales. ',
+    'vida': 'Fuerza o actividad esencial mediante la que obra el ser que la posee',
+    'verdad': ' Conformidad de las cosas con el concepto que de ellas forma la mente',
+    'utopia': 'Plan, proyecto, doctrina o sistema deseables que parecen de muy difícil realización',
+    'utilitarismo': 'Doctrina moderna que considera la utilidad como principio de la moral. ',
+    'teología': 'Ciencia que trata de Dios fundada en los textos sagrados, la tradición y los dogmas',
+    'taxonomia': 'Ciencia que trata de los principios, métodos y fines de la clasificación.',
+    'tautologia:': 'Repetición inútil y viciosa.',
+    'secesion': 'Acción por la cual se separa de una nación una parte de su pueblo y de su territorio',
+    'religion': ': Conjunto de creencias o dogmas acerca de la divinidad, de sentimientos de veneración y temor hacia ella',
+    'realismo': 'Doctrina que afirma la existencia objetiva de los universales',
+    'racional': 'Perteneciente o relativo a la razón',
+    'Pensamiento': 'Conjunto de ideas propias de una persona, de una colectividad o de una época',
+    'paz': 'Estado de quien no está perturbado por ningún conflicto o inquietud',
+    'paradoja': 'Hecho o expresión aparentemente contrarios a la lógica',
+    'oclocracia': 'Gobierno de la muchedumbre o de la plebe',
+    'necesidad': 'Impulso irresistible que hace que las causas obren infaliblemente en cierto sentido',
+    'naturaleza': 'Principio generador del desarrollo armónico y la plenitud de cada ser, en cuanto tal ser, siguiendo su propia e independiente evolución',
+    'metafisico': 'Parte de la filosofía que trata del ser en cuanto tal, y de sus propiedades, principios y causasprimeras. ',
+    'maleficencia': 'nHábito o costumbre de hacer mal  ',
+    'libertad': 'Facultad natural que tiene el hombre de obrar de una manera o de otra y de no obrar, por lo que es responsable de sus actos',
+    'ley': 'Conexión interna y esencial de los fenómenos, que condiciona el desarrollo necesario, regular, de los mismos',
+    'lenguaje': 'Sistema de señales de cualquier naturaleza física que cumple una función cognoscitiva y una función comunicativa (de relación) en el proceso de la actividad humana.',
+    'juicio': 'Pensamiento expresado en forma de proposición enunciativa en la cual se asevera algo sobre las cosas; objetivamente, es verdadero o falso.',
+    'justicia': 'Principio moral que lleva a dar a cada uno lo que le corresponde o pertenece.',
+    'dialectico': 'Serie ordenada de verdades o teoremas que se desarrolla en la ciencia o en la sucesión y encadenamiento de los hechos',
+    'derecho': 'Conjunto de principios y normas, expresivos de una idea de justicia y de orden, queregulan las relaciones humanas en toda sociedad y cuya observancia puede ser impuesta de manera coactiva',
+    'deber': 'Necesidad moral de cumplir las obligaciones',
+    'Respeto': 'Consideración y reconocimiento hacia los demás.',
+    'darvinismo social': ' Teoría sociológica que considera como motor principal del desarrollo de la sociedad la lucha por la existencia y la selección natural',
+    'dadaismo': 'Dirección del arte y de la literatura burgueses surgida entre los años de 1915-18 entre artistas, de diversos países, que habían emigrado a Suiza huyendo de los horrores de la Primera Guerra Mundial',
+    'cultura': 'Conjunto de modos de vida y costumbres, conocimientos y grado de desarrollo artístico, científico, industrial, en una época, grupo social',
+    'conocimiento': 'Entendimiento, inteligencia, razón natural.',
+    'colectivismo': 'Principio de la vida social y de la actividad conjunta de los hombres; es contrario al individualismo',
+    'civilizacion': 'Conjunto de costumbres, saberes y artes propio de una sociedad humana.',
+    'ciudadano': 'Persona considerada como miembro activo de un Estado, titular de derechos políticos y sometido a sus leyes.  ',
+    'cibernetica': 'Ciencia que trata de los rasgos generales de los procesos y sistemas de dirección en los dispositivos técnicos, en los organismos vivos y en las organizaciones humanas.',
+    'catastasis': 'Punto culminante del asunto de un drama, tragedia o poema épico',
+    'catarsis': ' Purificación, liberación o transformación interior suscitadas por una experiencia vitalprofunda. ',
+    'caracter': ' Conjunto de peculiaridades psíquicas estables del hombre; depende de la actividad del individuo y de sus condiciones de vida y se manifiesta en la manera de obrar.',
+    'cambio': 'Es la forma más general del ser de todos los objetos y fenómenos. El cambio abarca todo movimiento y toda interacción, el paso de un estado a otro',
+    'bioetica': 'Estudio de los problemas éticos originados por la investigación biológica y sus aplicaciones, como en la ingeniería genética o la clonación.',
+    'bien': 'En la teoría de los valores, la realidad que posee un valor positivo y por ello es estimable',
+    'basal': 'Situado en la base de una formación orgánica o de una construcción ',
+    'barbarie': 'Fiereza, crueldad',
+    'axiologia': 'Teoría de los valores',
+    'antropologia': 'Conjunto de ciencias que estudian los aspectos biológicos, culturales y sociales del ser humano.',
+    'antropico': 'Producido o modificado por la actividad humana. ',
+    'antrupico': 'Producido o modificado por la actividad humana. ',
+    'actualizacion': 'Concepto que designa un cambio del ser. En dicho concepto se revela sólo una parte del movimiento: el paso del ser del estado de posibilidad al estado de realidad.',
+    'acontecimiento': 'Concepto fundamental de la teoría de las probabilidades y de la estadística; designa la realización de cierta posibilidad al darse un determinado complejo de condiciones',
+    'absoluto': 'Concepto con que la filosofía idealista designa un sujeto eterno, infinito, incondicionado, perfecto e invariable, el cual es "suficiente en sí mismo", no depende de ninguna otra cosa, contiene de por si todo lo existente y lo crea.',
+    'abduccion': 'Silogismo cuya premisa mayor es evidente y la menor menos evidente o solo probable, lo que hace que la conclusión sea poco probable',
+    'a priori': 'Descendiendo de la causa al efecto o de la esencia de una cosa a suspropiedades. ',
+    'a posteriori': 'Ascendiendo del efecto a la causa o de las propiedades de una cosa a su esencia. ',
+    'libertad': 'Facultad de actuar sin restricciones externas injustas',
+    'dignidad': 'Valor intrínseco y respeto hacia cada ser humano.',
+    'altruismo': 'Acciones desinteresadas en beneficio de los demás.',
+    'dnoseologia': 'Teoría del conocimiento.',
+    'acotesimiento': 'Concepto fundamental de la teoría de las probabilidades y de la estadística; designa la realización de cierta posibilidad al darse un determinado complejo de condiciones',
+    'gnosticismos': 'Doctrina filosófica y religiosa de los primeros siglos de la Iglesia, mezcla de la cristiana con creencias judaicas y orientales, que se dividió en varias sectas',
+    'habits': 'Acciones que se convierten en automáticas como resultado de una prolongada repetición.',
+    'hermeneutica': 'Teoría de la interpretación de los textos.',
+    'Toerancia': 'Respeto hacia las ideas y creencias diferentes.',
+    'perro': 'nes un animal manifero',
+    'ecuanimidad': 'Serenidad y equilibrio emocional en situaciones difíciles o conflictivas.',
+    'Sabiduría': 'Conocimiento profundo y buen juicio en la toma de decisiones éticas.',
+    'prudencia': ' Actuar con cautela y sensatez, considerando las consecuencias de las acciones.',
+    'equidad': ' Trato justo e imparcial, sin discriminación.',
+    'concordancia': 'Ajuste y armonía en las ideas y valores de diferentes personas.',
+    'apego a la verdad': 'Compromiso con la veracidad y la objetividad en la comunicación.',
+    'transparencia': 'Claridad y honestidad en las acciones y decisiones.',
+    'Diligencia': 'cuidado y eficiencia en la realización de tareas y responsabilidades.',
+    'Austeridad': ' Moderación y sobriedad en el estilo de vida, evitando excesos.',
+    'humildad': 'Reconocimiento de las propias limitaciones y actitud de modestia.',
+    'amor al conocimiento': 'Búsqueda constante de aprender y comprender, promoviendo el desarrollo personal y colectivo.',
+    'concordia': 'Armonía y acuerdo entre las personas.',
+    'ciencia filosofica': 'Capacidad de autogobierno y toma de decisiones.',
+    'practica': 'Por estudiar los medios particulares, las virtudes, los deberes, etc.',
+    'forma de conciencia': 'Se ocupa de algo muy abstracto "el debe ser',
+    'benevolencia': 'Inclinación a hacer el bien.',
+    'coherencia': ' Consistencia y lógica en el pensamiento y la conducta.',
+    'lealtad': 'Fidelidad y compromiso hacia una causa o persona.',
+    'Autonomía': 'Capacidad de autogobierno y toma de decisiones.',
+    'Compromiso': 'Responsabilidad adquirida mediante un acuerdo.',
+    'Sinceridad': ' Veracidad y transparencia en las acciones y palabras.',
+    'Respeto': 'Consideración y reconocimiento hacia los demás.',
+    'Filantropía': ' Amor y acción en favor del bienestar de la humanidad.',
+    'Ecuanimidad': 'Serenidad y equilibrio en las situaciones difíciles.',
+    'Sabiduría': 'Conocimiento profundo y buen juicio en la toma de decisiones.',
+    'gratitud': 'Reconocimiento y agradecimiento por los beneficios recibidos.',
+    'Inclusión': ' Aceptación y participación equitativa de todas las personas, sin discriminación.',
+    'neutralidad': 'nes un animal manifero',
+    'Perseverancia': 'Persistencia y constancia en la consecución de metas y objetivos.',
+    'perseverancia': 'Persistencia y constancia en la consecución de metas y objetivos.',
+    'igualdado': 'Trato equitativo y respeto por la igual dignidad de todas las personas',
+    'resiliencia': ' Capacidad de superar adversidades y adaptarse positivamente a los cambios.',
+    'solidaridad': 'Colaboración y apoyo mutuo entre las personas.',
+    'tolerancia': 'Respeto hacia las ideas y creencias diferentes.',
+    'integridad': 'Coherencia entre lo que se piensa, se dice y se hace.',
+    'Empatía': 'Capacidad de entender y compartir los sentimientos de los demás.',
+    'honestidad': 'Actuar con rectitud y sinceridad.',
+    'Justicia': 'Principio de dar a cada uno lo que le corresponde.',
+    'responsabilidad': 'cumplimiento de obligaciones y deberes',
+    'virtud': 'Cualidad positiva de una persona que la lleva a actuar correctamente',
+    'teorica ': 'Por tener sus conocimientos especulativos puramente racionales, sobre los criterios o Normas de la moral.',
+    'abiota': 'Teoría del conocimiento',
+    'dialogismo': 'Charla en que el hablante hace como si hablara consigo mismo, o refiere textualmentesus propios dichos o discursos o los de otras personas, o de cosas personificadas',
+    'eclecticismo': ' Escuela filosófica que procura conciliar las doctrinas que parecen mejores o más verosímiles, aunque procedan de diversos sistemas.',
+    'Efectivismo': 'Una de las corrientes de la filosofía matemática tiende a limitar la matemática moderna a lo que en ella ha recibido una fundamentación efectiva',
+    'epistemología': 'Teoría de los fundamentos y métodos del conocimiento científico',
+    'escepticismo': 'Doctrina que consiste en afirmar que la verdad no existe, o que, si existe, el ser humano es incapaz de conocerla',
+    'estetica': 'Disciplina que estudia la belleza y los fundamentos filosóficos del arte.  ',
+    'fenomeno': 'En la filosofía de Immanuel Kant, lo que es objeto de la experiencia sensible',
+    'filosofia': 'Conjunto de saberes que busca establecer, de manera racional, los principios más generales que organizan y orientan el conocimiento de la realidad, así como el sentido del obrar humano',
+    'formalismo': 'Doctrina que sostiene que las verdades científicas son meramente formales y se apoyan en las convenciones',
+    'fundamento': 'Razón principal o motivo con que se pretende afianzar y asegurar algo',
+    'generalizacion': 'Proceso lógico en virtud del cual se pasa de lo singular a lo general, del saber menos general al que lo, es más.',
+    'geopolitica': 'Teoría que pretende justificar con referencias a los datos de la geografía económica y política, distintas formas de expansión imperialista',
+    'dnoseologia': 'Teoría del conocimiento.',
+    'acotecimiento': 'Concepto fundamental de la teoría de las probabilidades y de la estadística; designa la realización de cierta posibilidad al darse un determinado complejo de condiciones',
+    'gnosticismo': 'Doctrina filosófica y religiosa de los primeros siglos de la Iglesia, mezcla de la cristiana con creencias judaicas y orientales, que se dividió en varias sectas',
+    'habitos': 'Acciones que se convierten en automáticas como resultado de una prolongada repetición.',
+    'hermeneutica': 'Teoría de la interpretación de los textos.',
+    'Tolerancia': 'Respeto hacia las ideas y creencias diferentes.',
+    'heuristica': 'Arte de sostener una discusión; floreció sobre todo entre los sofistas de la antigua Grecia. Surgida como medio de buscar la verdad a través de la polémica.',
+    'hilozoismo': 'Doctrina según la cual la vida y, por consiguiente, la sensibilidad, son inherentes a todas las cosas de la naturaleza.',
+    'hipostasis': 'Consideración de lo abstracto o irreal como algo real.  ',
+    'idea': 'Término filosófico que designa "sentido", "significación", "esencia" y se halla estrechamente vinculado a las categorías del pensar y del ser',
+    'idealismo': 'Sistema filosófico que considera la idea como principio del ser y del conocer',
+    'iluminismo': 'Teoría idealista sobre el carácter místico-religioso de la cognición; según aquélla, la verdad no se descubre por vía raciona y lógica, discursiva, sino de manera repentina',
+    'imperativo categorico': 'Termino filosófico que caracteriza la ley moral en la ética de Kant. Kant llamaba "imperativo" a la sentencia que posee forma de mandato.',
+    'individualismo': 'Tendencia filosófica que defiende la autonomía y supremacía de los derechos del individuofrente a los de la sociedad y el Estado.',
+    'empatia': 'Capacidad de entender y compartir los sentimientos de los demás.',
+    'compromiso': 'Responsabilidad adquirida mediante un acuerdo.',
+    // Agrega más palabras aquí
+  };
+ 
+  document.getElementById("btn").onclick = function () {
+            var buscar = document.getElementById("buscar").value;
+            var resultado = palabras[buscar];
+            if (resultado) {
+                document.getElementById("panel").innerHTML = resultado;
+            } else {
+                document.getElementById("panel").innerHTML = "No se ha encontrado ningún resultado";
+            }
+        }
+    </script>
+ 
+</body>
+  </label>
+  </div>
+</header>
+
+<div class="books-fall">
+   <div class="books">
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy6.gif"></div>
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy5.gif"></div>
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy6.gif"></div>
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy5.gif"></div>
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy6.gif"></div>
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy5.gif"></div>
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy6.gif"></div>
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy6.gif"></div>
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy5.gif"></div>
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy6.gif"></div>
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy5.gif"></div>
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy6.gif"></div>
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy5.gif"></div>
+      <div><img src="file:///C:/Users/Asus/OneDrive/Documentos/1%20Primer%20Semestre/Paginaweb/giphy6.gif"></div>
+
+   </div>
+
+</div>
+</html>
+
